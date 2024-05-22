@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Contact from './Contact';
+import About from './About';
+import Body from './Body';
+import Room from './Room';
+import DetailRoom from './DetailRoom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './css/bootstrap.min.css';
+import './css/animate.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Body />} /> {/* Temporary Home component */}
+            <Route path="/about" element={<About />} />
+            <Route path="/room" element={<Room />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/detailroom" element={<DetailRoom />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    );
 }
 
 export default App;
