@@ -8,7 +8,7 @@ const Login = () => {
       <Title>Masuk</Title>
       <GoogleLoginButton>
         <img src={Icon} alt="Google Logo" style={{ width: '20px', marginRight: '10px' }} />
-        Masuk dengan google
+        Masuk dengan google atau email
       </GoogleLoginButton>
       <Divider>atau</Divider>
       <Form>
