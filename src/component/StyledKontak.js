@@ -110,7 +110,7 @@ export const GoogleMaps = styled.div`
 
   iframe {
     width: 100%;
-    height: 450px;
+    height: 380px;
     border: 0;
   }
 `;
