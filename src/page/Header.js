@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LogoImage from '../img/LogoJH.png'; 
 import { 
   NavStyle, 
   LeftContainer, 
@@ -15,29 +14,31 @@ import {
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            // Mendapatkan posisi scroll
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  useEffect(() => {
+    const handleScroll = () => {
+      // Mendapatkan posisi scroll
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // Mengubah state isSticky berdasarkan posisi scroll
-            setIsSticky(scrollTop > 50); // Misalnya, ubah 50 menjadi posisi scroll tertentu untuk menentukan kapan navigasi harus menjadi lengket
-        };
+      // Mengubah state isSticky berdasarkan posisi scroll
+      setIsSticky(scrollTop > 50); // Misalnya, ubah 50 menjadi posisi scroll tertentu untuk menentukan kapan navigasi harus menjadi lengket
+    };
 
-        // Menambahkan event listener untuk event scroll
-        window.addEventListener('scroll', handleScroll);
+    // Menambahkan event listener untuk event scroll
+    window.addEventListener('scroll', handleScroll);
 
-        // Membersihkan event listener saat komponen unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    // Membersihkan event listener saat komponen unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <NavStyle isSticky={isSticky}>
       <LeftContainer>
         <LogoStyle>
-        <Link to="/" style={{ color: '#0D99FF' }}><img src={LogoImage} alt="Logo Hotel" /></Link>
+          <Link to="/" style={{ color: '#0D99FF' }}>
+            <img src="/images/LogoJH.png" alt="Logo Hotel" />
+          </Link>
         </LogoStyle>
         <UlStyle>
           <LiStyle><Link to="/" style={{ textDecoration: 'none' }}><AStyle>Beranda</AStyle></Link></LiStyle>

@@ -1,13 +1,16 @@
 import React from 'react';
-import Icon from '../img/googele.png'; 
+// Menghapus baris impor yang tidak digunakan
+// import Icon from '../img/googele.png'; 
 import {LoginContainer,FlexKanan,FlexKiri,GoogleLoginButton,Divider,Form,Input,Button,PolicyText,Title,Flex} from '../component/StyledLogin';
 import { Link } from 'react-router-dom';
+
 const Login = () => {
   return (
     <LoginContainer>
       <Title>Masuk</Title>
       <GoogleLoginButton>
-        <img src={Icon} alt="Google Logo" style={{ width: '20px', marginRight: '10px' }} />
+        {/* Menggunakan path relatif langsung untuk gambar */}
+        <img src="/images/googele.png" alt="Google Logo" style={{ width: '20px', marginRight: '10px' }} />
         Masuk dengan google
       </GoogleLoginButton>
       <Divider>atau</Divider>
