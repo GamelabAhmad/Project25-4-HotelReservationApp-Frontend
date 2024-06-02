@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   padding: 20px;
-  font-family: Arial, sans-serif;
 `;
 
 export const AboutSection = styled.section`
@@ -10,14 +9,9 @@ export const AboutSection = styled.section`
 `;
 
 export const Container = styled.div`
-  /* CSS untuk Container */
   display: flex;
-  flex-direction: row; /* Mengatur agar elemen dalam container diatur secara horizontal */
-  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 20px;
 `;
 
 export const Column = styled.div`
@@ -25,46 +19,52 @@ export const Column = styled.div`
   margin: 40px 60px 0 20px; /* Add margin to top and both sides for better spacing */
   text-align: justify; /* Justify the text in the column */
   width: 50%; /* Memberikan lebar agar kedua kolom tidak bertumpuk */
-  font-size: 1.5rem;
+  font-size:1.3rem;
 `;
 
 export const Image = styled.img`
   width: 100%; /* Lebar gambar 100% dari elemen pembungkus */
   max-width: 800px; /* Lebar maksimum gambar */
-  height: 300px; /* Tinggi gambar */
+  height: 240px; /* Tinggi gambar */
   object-fit: contain; /* Menjaga proporsi gambar */
-  margin-left: 20px; /* Posisikan gambar lebih ke kanan dengan margin kiri */
+  margin-left: 20px; /* Posisikan gambar lebih ke kanan dengan margin kiri*/
 `;
 
-export const TeamSection = styled.section`
-  /* CSS untuk TeamSection */
-  margin-top: 50px;
-`;
-
-export const TeamTitle = styled.h2`
-  /* CSS untuk TeamTitle */
-  font-size: 24px;
-  font-weight: bold;
+export const KontainerTim = styled.div`
   text-align: center;
+  padding: 20px;
 `;
 
-export const PhotosContainer = styled.div`
-  /* CSS untuk PhotosContainer */
-  display: flex;
+export const GridAnggota = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-export const Photo = styled.div`
-  /* CSS untuk Photo */
-  margin: 10px;
-  text-align: center;
+export const KartuAnggota = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const PhotoImage = styled.img`
-  /* CSS untuk PhotoImage */
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+export const GambarAnggota = styled.img`
+  width:150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+`;
+
+export const NamaAnggota = styled.div`
+  background-color: #c56e24;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 `;

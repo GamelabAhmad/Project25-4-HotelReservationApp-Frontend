@@ -110,13 +110,7 @@ export const GoogleMaps = styled.div`
 
   iframe {
     width: 100%;
-    height: 380px;
+    height: 400px;
     border: 0;
   }
-`;
-
-export const Footer = styled.footer`
-  text-align: center;
-  padding: 10px;
-  background-color: #f1f1f1;
 `;

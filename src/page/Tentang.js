@@ -5,14 +5,22 @@ import {
   Container,
   Column,
   Image,
-  TeamSection,
-  TeamTitle,
-  PhotosContainer,
-  Photo,
-  PhotoImage,
+  KontainerTim,
+  GridAnggota,
+  KartuAnggota,
+  GambarAnggota,
+  NamaAnggota
 } from '../component/StyledTentang';
 
-function Tentang() {
+const anggotaTim = [
+  { nama: 'Andhita Firmansyah Putra', img: '/images/andhita-firmansyah-putra.png' },
+  { nama: 'Faza Yoga Ardana', img: '/images/faza-yoga.png' },
+  { nama: 'Moch Rizal Hardiansyah', img: '/images/moch-rizal-hardiansyah.png' },
+  { nama: 'Muhammad Rinal', img: '/images/muhammad-rinal.png' },
+  { nama: 'Septinna Choirunisa', img: '/images/septinna-choirunisa.png' },
+];
+
+const Tentang = () => {
   return (
     <Main>
       <AboutSection>
@@ -28,31 +36,19 @@ function Tentang() {
           </Column>
         </Container>
       </AboutSection>
-      <TeamSection>
-        <TeamTitle>Tim Kami</TeamTitle>
-        <PhotosContainer>
-          <Photo>
-            <PhotoImage src="/images/temm.jpg" alt="Team Member 1" />
-            <p>asep</p>
-          </Photo>
-          <Photo>
-            <PhotoImage src="/images/munyuk.jpg" alt="Team Member 2" />
-            <p>orang tua</p>
-          </Photo>
-          <Photo>
-            <PhotoImage src="/images/sponge.jpg" alt="Team Member 3" />
-            <p>pak tua</p>
-          </Photo>
-          <Photo>
-            <PhotoImage src="/images/inces.jpg" alt="Team Member 4" />
-            <p>Cucu dakjal</p>
-          </Photo>
-          <Photo>
-            <PhotoImage src="/images/jeus.jpg" alt="Team Member 5" />
-            <p>Moch Rizal herdiansyah</p>
-          </Photo>
-        </PhotosContainer>
-      </TeamSection>
+      <KontainerTim>
+      <div style={{ textAlign: 'center', width: '100%' }}>
+          <h1 style={{ marginTop: '20px', fontSize: '2.5rem', display: 'inline-block', borderBottom: '2px solid black'}}>Tim Kami</h1>
+        </div>
+        <GridAnggota>
+          {anggotaTim.map((anggota, index) => (
+            <KartuAnggota key={index}>
+              <GambarAnggota src={anggota.img} alt={anggota.nama} />
+              <NamaAnggota>{anggota.nama}</NamaAnggota>
+            </KartuAnggota>
+          ))}
+        </GridAnggota>
+      </KontainerTim>
     </Main>
   );
 }

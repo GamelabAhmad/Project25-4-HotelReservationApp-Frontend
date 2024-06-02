@@ -6,13 +6,14 @@ import {
   ContactFormWrapper, 
   ContactForm, 
   GoogleMaps, 
-  Footer 
 } from '../component/StyledKontak';
 
 function Kontak() {
   return (
     <div className="Kontak">
-      <h1 style={{ textAlign: 'center', marginTop: '20px', fontSize: '2.5rem' }}>Kontak</h1>
+      <div style={{ textAlign: 'center', width: '100%' }}>
+          <h1 style={{ marginTop: '20px', fontSize: '2.5rem', display: 'inline-block', borderBottom: '2px solid black'}}>Kontak</h1>
+        </div>
       <Main>
         <ContactSection>
           <ContactInfo>
@@ -46,9 +47,6 @@ function Kontak() {
           </GoogleMaps>
         </ContactSection>
       </Main>
-      <Footer>
-        <p>Semua data diperoleh dari <a href="https://themoviedb.org" target="_blank" rel="noreferrer">TheMovieDB</a></p>
-      </Footer>
     </div>
   );
 }
