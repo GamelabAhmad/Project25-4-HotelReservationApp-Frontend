@@ -13,11 +13,11 @@ import {
 } from '../component/StyledTentang';
 
 const anggotaTim = [
-  { nama: 'Andhita Firmansyah Putra', img: '/images/firman.png' },
-  { nama: 'Faza Yoga Ardana', img: '/images/faza-yoga.png' },
-  { nama: 'Moch Rizal Hardiansyah', img: '/images/moch_zeus.png' },
-  { nama: 'Muhammad Rinal', img: '/images/muhammad-rinal.png' },
-  { nama: 'Septinna Choirunisa', img: '/images/septinna-choirunisa.png' },
+  { nama: 'Andhita Firmansyah Putra', img: '/images/andhita-firman.png', deskripsi: 'Sebagai Frontend Developer' },
+  { nama: 'Faza Yoga Ardana', img: '/images/faza-yoga.png', deskripsi: 'Sebagai Frontend Developer' },
+  { nama: 'Septinna Choirunisa', img: '/images/septinna-choirunisa.png', deskripsi: 'Sebagai Frontend Developer' },
+  { nama: 'Moch Rizal Hardiansyah', img: '/images/moch-rizal.png', deskripsi: 'Sebagai Backend Developer' },
+  { nama: 'Muhammad Rinal', img: '/images/muhammad-rinal.png', deskripsi: 'Sebagai Backend Developer' },
 ];
 
 const Tentang = () => {
@@ -37,14 +37,17 @@ const Tentang = () => {
         </Container>
       </AboutSection>
       <KontainerTim>
-      <div style={{ textAlign: 'center', width: '100%' }}>
+        <div style={{ textAlign: 'center', width: '100%' }}>
           <h1 style={{ marginTop: '20px', fontSize: '2.5rem', display: 'inline-block', borderBottom: '2px solid black'}}>Tim Kami</h1>
         </div>
         <GridAnggota>
           {anggotaTim.map((anggota, index) => (
-            <KartuAnggota key={index}>
+            <KartuAnggota key={index} className={`item-${index + 1}`}>
               <GambarAnggota src={anggota.img} alt={anggota.nama} />
-              <NamaAnggota>{anggota.nama}</NamaAnggota>
+              <NamaAnggota>
+                <div>{anggota.nama}</div>
+                <small>{anggota.deskripsi}</small>
+              </NamaAnggota>
             </KartuAnggota>
           ))}
         </GridAnggota>
@@ -52,5 +55,4 @@ const Tentang = () => {
     </Main>
   );
 }
-
 export default Tentang;
