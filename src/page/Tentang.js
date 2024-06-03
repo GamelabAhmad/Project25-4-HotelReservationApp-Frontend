@@ -13,9 +13,9 @@ import {
 } from '../component/StyledTentang';
 
 const anggotaTim = [
-  { nama: 'Andhita Firmansyah Putra', img: '/images/andhita-firmansyah-putra.png' },
+  { nama: 'Andhita Firmansyah Putra', img: '/images/firman.png' },
   { nama: 'Faza Yoga Ardana', img: '/images/faza-yoga.png' },
-  { nama: 'Moch Rizal Hardiansyah', img: '/images/moch-rizal-hardiansyah.png' },
+  { nama: 'Moch Rizal Hardiansyah', img: '/images/moch_zeus.png' },
   { nama: 'Muhammad Rinal', img: '/images/muhammad-rinal.png' },
   { nama: 'Septinna Choirunisa', img: '/images/septinna-choirunisa.png' },
 ];
