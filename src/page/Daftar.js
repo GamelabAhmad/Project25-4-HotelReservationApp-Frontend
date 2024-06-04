@@ -12,7 +12,9 @@ const Daftar = () => {
       </GoogleDaftarButton>
       <Divider>atau</Divider>
       <Form>
+        <Input type="text" placeholder="Nama" />
         <Input type="email" placeholder="Email" />
+        <Input type="text" placeholder="No.Hp" />
         <Input type="password" placeholder="Password" />
         <Input type="password" placeholder="Konfirmasi Password" />
         <Button type="submit">Daftar</Button>
